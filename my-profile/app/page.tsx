@@ -30,7 +30,7 @@ export default function Home() {
             <div className="w-[140px] h-[140px] relative blob-shape">
               {/* Glassy Wavy Background Layer */}
               <div 
-                className="absolute inset-0 bg-white/40 backdrop-blur-xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] blob-shape border border-white/50"
+                className="absolute inset-0 bg-bubblegum-pink/20 backdrop-blur-xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] blob-shape border border-white/50"
                 style={{ filter: "url(#wavy-edge)" }}
               />
               {/* Content Layer (Legible) */}
@@ -81,9 +81,9 @@ export default function Home() {
               rel="noopener noreferrer"
               className="relative group min-h-[220px]"
             >
-              {/* Glassy Wavy Background Layer */}
+              {/* Tinted Glassy Wavy Background Layer */}
               <div 
-                className={`absolute inset-0 ${link.color}/60 backdrop-blur-xl shadow-lg rounded-[40px] border border-white/40`}
+                className={`absolute inset-0 ${link.color}/40 backdrop-blur-xl shadow-lg rounded-[40px] border border-white/40`}
                 style={{ filter: "url(#wavy-edge)" }}
               />
               
