@@ -20,7 +20,7 @@
 | **편집** | **인라인 편집** | 링크 목록에서 제목과 URL을 즉시 수정 가능 |
 | **아이콘** | **자동 파비콘** | Google API를 사용하여 URL 기반 파비콘 노출 |
 | **UI/UX** | shadcn/ui 기반 | 심플하고 모던한 UI 및 반응형 레이아웃 |
-| **공유** | displayName URL | `domain.com/[displayName]` 형태의 고유 접근 경로 제공 |
+| **공유** | displayName URL | `mylink.com/displayName` 형태의 고유 접근 경로 제공 |
 
 ### 3.2 확장 기능 (Phase 2)
 | 구분 | 기능명 | 상세 내용 |
@@ -46,7 +46,7 @@
 - URL 입력 완료 시 해당 도메인의 파비콘을 실시간으로 가져와 리스트에 노출.
 
 ### 4.4 URL 라우팅 및 displayName 설정
-- **URL Slug**: 사용자의 `displayName`이 즉시 URL 주소가 됨 (`domain.com/[displayName]`).
+- **URL Slug**: 사용자의 `displayName`이 즉시 URL 주소가 됨 (`mylink.com/displayName`).
 - **초기값 설정**: 첫 로그인 시 구글 지메일 계정의 앞부분(`email.split('@')[0]`)을 가져와서 `displayName` 초기값으로 설정함.
 - **중복 체크**: 고유한 URL 제공을 위해 `displayName` 중복 체크 기능 필요.
 
