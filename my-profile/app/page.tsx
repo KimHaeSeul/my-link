@@ -10,6 +10,14 @@ export default function Home() {
 
   return (
     <div className="relative min-h-screen py-16 px-6 overflow-hidden">
+      {/* SVG Filter for Squiggly Lines */}
+      <svg className="hidden">
+        <filter id="squiggly">
+          <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="3" result="noise" />
+          <feDisplacementMap in="SourceGraphic" in2="noise" scale="5" />
+        </filter>
+      </svg>
+
       {/* Background Stickers */}
       <div className="sticker top-[60%] left-[20%] text-4xl opacity-30">☁️</div>
 
@@ -17,7 +25,10 @@ export default function Home() {
         {/* Profile Header */}
         <div className="flex flex-col items-center text-center mb-20">
           <div className="relative mb-8">
-            <div className="w-[140px] h-[140px] rounded-[60%_40%_30%_70%/60%_30%_70%_40%] bg-white p-2 shadow-2xl rotate-3 transition-transform hover:rotate-0 overflow-hidden">
+            <div 
+              className="w-[140px] h-[140px] rounded-[50px] bg-white p-2 shadow-2xl rotate-3 transition-transform hover:rotate-0 overflow-hidden"
+              style={{ filter: "url(#squiggly)" }}
+            >
               <div className="w-full h-full rounded-[inherit] bg-gradient-to-br from-bubblegum-pink to-lavender-dream flex items-center justify-center text-white text-5xl font-semibold tracking-tight">
                 HS
               </div>
