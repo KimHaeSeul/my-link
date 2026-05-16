@@ -10,6 +10,16 @@ export default function Home() {
 
   return (
     <div className="relative min-h-screen py-16 px-6 overflow-hidden">
+      {/* SVG Filter for Wavy/Squiggly Borders */}
+      <svg className="absolute w-0 h-0">
+        <defs>
+          <filter id="wavy-edge">
+            <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="1" result="noise" />
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="10" />
+          </filter>
+        </defs>
+      </svg>
+
       {/* Background Stickers */}
       <div className="sticker top-[60%] left-[20%] text-4xl opacity-30">☁️</div>
 
@@ -17,7 +27,10 @@ export default function Home() {
         {/* Profile Header */}
         <div className="flex flex-col items-center text-center mb-20">
           <div className="relative mb-8">
-            <div className="w-[140px] h-[140px] bg-white p-2 shadow-2xl blob-shape overflow-hidden">
+            <div 
+              className="w-[140px] h-[140px] bg-white p-2 shadow-2xl blob-shape overflow-hidden"
+              style={{ filter: "url(#wavy-edge)" }}
+            >
               <div className="w-full h-full rounded-[inherit] bg-gradient-to-br from-bubblegum-pink to-lavender-dream flex items-center justify-center text-white text-5xl font-semibold tracking-tight">
                 HS
               </div>
@@ -39,10 +52,16 @@ export default function Home() {
           </p>
 
           <div className="flex gap-4">
-            <button className="clay-btn bg-bubblegum-pink text-white text-lg">
+            <button 
+              className="clay-btn bg-bubblegum-pink text-white text-lg"
+              style={{ filter: "url(#wavy-edge)" }}
+            >
               Contact Me
             </button>
-            <button className="clay-btn bg-white text-slate-800 text-lg">
+            <button 
+              className="clay-btn bg-white text-slate-800 text-lg"
+              style={{ filter: "url(#wavy-edge)" }}
+            >
               Explore More
             </button>
           </div>
@@ -55,7 +74,8 @@ export default function Home() {
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="cloud-card p-1 group"
+              className="cloud-card p-1 group overflow-visible"
+              style={{ filter: "url(#wavy-edge)" }}
             >
               <div className={`${link.color} w-full h-full p-8 flex flex-col justify-between min-h-[220px] rounded-[inherit]`}>
                 <div className="flex justify-between items-start">
