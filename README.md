@@ -2,7 +2,6 @@
 
 My Link is a link manager that allows you to manage your links in one place.
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
