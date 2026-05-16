@@ -11,10 +11,6 @@ export default function Home() {
   return (
     <div className="relative min-h-screen py-16 px-6 overflow-hidden">
       {/* Background Stickers */}
-      <div className="sticker top-10 left-[10%] text-6xl">⭐</div>
-      <div className="sticker top-40 right-[15%] text-5xl">💖</div>
-      <div className="sticker bottom-20 left-[5%] text-7xl opacity-50">🌈</div>
-      <div className="sticker bottom-40 right-[10%] text-6xl rotate-12">✨</div>
       <div className="sticker top-[60%] left-[20%] text-4xl opacity-30">☁️</div>
 
       <main className="max-w-4xl mx-auto relative z-10">
