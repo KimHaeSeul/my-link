@@ -28,13 +28,13 @@ export default function Home() {
         <div className="flex flex-col items-center text-center mb-20">
           <div className="relative mb-8">
             <div className="w-[140px] h-[140px] relative blob-shape">
-              {/* Wavy Background Layer */}
+              {/* Glassy Wavy Background Layer */}
               <div 
-                className="absolute inset-0 bg-white shadow-[0_20px_50px_rgba(0,0,0,0.1)] blob-shape"
+                className="absolute inset-0 bg-white/40 backdrop-blur-xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] blob-shape border border-white/50"
                 style={{ filter: "url(#wavy-edge)" }}
               />
               {/* Content Layer (Legible) */}
-              <div className="absolute inset-2 blob-shape bg-gradient-to-br from-bubblegum-pink to-lavender-dream flex items-center justify-center text-white text-5xl font-semibold tracking-tight">
+              <div className="absolute inset-2 blob-shape bg-gradient-to-br from-bubblegum-pink/80 to-lavender-dream/80 flex items-center justify-center text-white text-5xl font-semibold tracking-tight shadow-inner">
                 HS
               </div>
             </div>
@@ -57,14 +57,14 @@ export default function Home() {
           <div className="flex gap-4">
             <button className="relative px-8 py-3 group">
               <div 
-                className="absolute inset-0 bg-bubblegum-pink rounded-full shadow-[0_10px_25px_rgba(0,0,0,0.1)] transition-shadow group-hover:shadow-[0_15px_30px_rgba(0,0,0,0.15)]"
+                className="absolute inset-0 bg-bubblegum-pink/70 backdrop-blur-md rounded-full shadow-[0_10px_25px_rgba(0,0,0,0.1)] border border-white/30 transition-all group-hover:bg-bubblegum-pink/80 group-hover:shadow-[0_15px_30px_rgba(0,0,0,0.15)]"
                 style={{ filter: "url(#wavy-edge)" }}
               />
               <span className="relative text-white text-lg font-medium">Contact Me</span>
             </button>
             <button className="relative px-8 py-3 group">
               <div 
-                className="absolute inset-0 bg-white border-2 border-slate-50 rounded-full shadow-[0_10px_25px_rgba(0,0,0,0.05)] transition-shadow group-hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)]"
+                className="absolute inset-0 bg-white/30 backdrop-blur-md border border-white/50 rounded-full shadow-[0_10px_25px_rgba(0,0,0,0.05)] transition-all group-hover:bg-white/40 group-hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)]"
                 style={{ filter: "url(#wavy-edge)" }}
               />
               <span className="relative text-slate-800 text-lg font-medium">Explore More</span>
@@ -81,9 +81,9 @@ export default function Home() {
               rel="noopener noreferrer"
               className="relative group min-h-[220px]"
             >
-              {/* Wavy Background Layer */}
+              {/* Glassy Wavy Background Layer */}
               <div 
-                className={`absolute inset-0 ${link.color} shadow-lg rounded-[40px]`}
+                className={`absolute inset-0 ${link.color}/60 backdrop-blur-xl shadow-lg rounded-[40px] border border-white/40`}
                 style={{ filter: "url(#wavy-edge)" }}
               />
               
