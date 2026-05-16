@@ -17,14 +17,14 @@ export default function Home() {
         {/* Profile Header */}
         <div className="flex flex-col items-center text-center mb-20">
           <div className="relative mb-8">
-            <div className="w-[140px] h-[140px] rounded-[50px] bg-white p-2 shadow-2xl rotate-3 transition-transform hover:rotate-0">
-              <div className="w-full h-full rounded-[40px] bg-gradient-to-br from-bubblegum-pink to-lavender-dream flex items-center justify-center text-white text-5xl font-black tracking-tighter">
+            <div className="w-[140px] h-[140px] rounded-[60%_40%_30%_70%/60%_30%_70%_40%] bg-white p-2 shadow-2xl rotate-3 transition-transform hover:rotate-0 overflow-hidden">
+              <div className="w-full h-full rounded-[inherit] bg-gradient-to-br from-bubblegum-pink to-lavender-dream flex items-center justify-center text-white text-5xl font-semibold tracking-tight">
                 HS
               </div>
             </div>
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-black mb-4 tracking-tight text-slate-800">
+          <h1 className="text-5xl md:text-7xl font-semibold mb-4 tracking-tight text-slate-800">
             HS&apos;s World
           </h1>
           
@@ -34,8 +34,8 @@ export default function Home() {
             <div className="glass-pill">🚀 Tech</div>
           </div>
 
-          <p className="text-xl md:text-2xl font-bold text-slate-600 max-w-xl leading-relaxed mb-10">
-            Welcome to my-link space! 👋
+          <p className="text-xl md:text-2xl font-medium text-slate-600 max-w-xl leading-relaxed mb-10">
+            Welcome to my-link space! 🤗
           </p>
 
           <div className="flex gap-4">
@@ -69,10 +69,10 @@ export default function Home() {
                 </div>
                 
                 <div>
-                  <h3 className="text-3xl font-black text-slate-800 mb-1 uppercase">
+                  <h3 className="text-3xl font-semibold text-slate-800 mb-1 uppercase">
                     {link.name}
                   </h3>
-                  <p className="text-slate-800/70 font-bold text-sm">
+                  <p className="text-slate-800/70 font-medium text-sm">
                     {link.description}
                   </p>
                 </div>
@@ -91,10 +91,10 @@ export default function Home() {
         <section className="relative py-12 mb-20">
           <div className="clay-card bg-lemon-pop p-8 text-center relative overflow-hidden">
             <div className="absolute top-0 right-0 p-4 text-4xl opacity-20">🎨</div>
-            <h2 className="text-3xl font-black text-slate-800 mb-2 uppercase tracking-tighter">
+            <h2 className="text-3xl font-semibold text-slate-800 mb-2 uppercase tracking-tight">
               Stay Sweet & Stay Creative!
             </h2>
-            <p className="font-bold text-slate-700">
+            <p className="font-medium text-slate-700">
               Dreaming of a colorful digital future ✨
             </p>
           </div>
@@ -105,7 +105,7 @@ export default function Home() {
           <div className="flex gap-4 text-2xl">
             <span>🍭</span><span>🎀</span><span>🍦</span><span>🧸</span>
           </div>
-          <p className="font-black text-xs uppercase tracking-[0.2em] text-slate-400">
+          <p className="font-semibold text-xs uppercase tracking-[0.2em] text-slate-400">
             © 2026 HaeSeul • Made with Love & Magic
           </p>
         </footer>

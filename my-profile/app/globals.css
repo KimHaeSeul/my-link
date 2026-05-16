@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-bubblegum-pink: #FFB7D5;
+  --color-bubblegum-pink: #FFDCE5;
   --color-electric-blue: #70D6FF;
   --color-soft-mint: #99FFD3;
   --color-lemon-pop: #FFEA70;
@@ -10,8 +10,9 @@
 }
 
 :root {
-  --background: #fdf2f8; /* Very soft pink background */
+  --background: #ffffff;
   --foreground: #1e293b;
+  --bubblegum-pink: #FFDCE5;
 }
 
 body {
