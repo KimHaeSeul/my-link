@@ -22,13 +22,10 @@ export default function Home() {
                 HS
               </div>
             </div>
-            <div className="absolute -bottom-2 -right-4 bg-lemon-pop border-4 border-white rounded-2xl px-4 py-1 font-black text-xl shadow-lg rotate-12">
-              Hello!
-            </div>
           </div>
 
           <h1 className="text-5xl md:text-7xl font-black mb-4 tracking-tight text-slate-800">
-            Hae<span className="text-bubblegum-pink">Seul</span>&apos;s World
+            HS&apos;s World
           </h1>
           
           <div className="flex items-center gap-3 mb-8">
@@ -38,8 +35,7 @@ export default function Home() {
           </div>
 
           <p className="text-xl md:text-2xl font-bold text-slate-600 max-w-xl leading-relaxed mb-10">
-            Welcome to my-link space! <br />
-            Let&apos;s make something cool together 🍭
+            Welcome to my-link space! 👋
           </p>
 
           <div className="flex gap-4">
