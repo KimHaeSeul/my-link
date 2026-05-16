@@ -10,12 +10,17 @@ export default function Home() {
 
   return (
     <div className="relative min-h-screen py-16 px-6 overflow-hidden">
-      {/* SVG Filter for Squiggly Lines */}
-      <svg className="hidden">
-        <filter id="squiggly">
-          <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="3" result="noise" />
-          <feDisplacementMap in="SourceGraphic" in2="noise" scale="5" />
-        </filter>
+      {/* SVG Definitions for Wavy Effects */}
+      <svg className="absolute w-0 h-0">
+        <defs>
+          <clipPath id="wavyPath" clipPathUnits="objectBoundingBox">
+            <path d="M0,0.05 C0.05,0 0.1,0 0.15,0.05 S 0.25,0.1 0.3,0.05 S 0.4,0 0.45,0.05 S 0.55,0.1 0.6,0.05 S 0.7,0 0.75,0.05 S 0.85,0.1 0.9,0.05 S 1,0 1,0.05 V0.95 C1,1 0.95,1 0.9,0.95 S 0.75,0.9 0.7,0.95 S 0.6,1 0.55,0.95 S 0.45,0.9 0.4,0.95 S 0.3,1 0.25,0.95 S 0.15,0.9 0.1,0.95 S 0,1 0,0.95 Z" />
+          </clipPath>
+          <filter id="squiggly">
+            <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="3" result="noise" />
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="5" />
+          </filter>
+        </defs>
       </svg>
 
       {/* Background Stickers */}
@@ -26,10 +31,10 @@ export default function Home() {
         <div className="flex flex-col items-center text-center mb-20">
           <div className="relative mb-8">
             <div 
-              className="w-[140px] h-[140px] rounded-[50px] bg-white p-2 shadow-2xl rotate-3 transition-transform hover:rotate-0 overflow-hidden"
-              style={{ filter: "url(#squiggly)" }}
+              className="w-[140px] h-[140px] bg-white p-2 shadow-2xl rotate-3 transition-transform hover:rotate-0 overflow-hidden"
+              style={{ clipPath: "url(#wavyPath)" }}
             >
-              <div className="w-full h-full rounded-[inherit] bg-gradient-to-br from-bubblegum-pink to-lavender-dream flex items-center justify-center text-white text-5xl font-semibold tracking-tight">
+              <div className="w-full h-full bg-gradient-to-br from-bubblegum-pink to-lavender-dream flex items-center justify-center text-white text-5xl font-semibold tracking-tight">
                 HS
               </div>
             </div>
@@ -67,9 +72,10 @@ export default function Home() {
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="clay-card p-1 group overflow-hidden"
+              className="group relative"
+              style={{ clipPath: "url(#wavyPath)" }}
             >
-              <div className={`${link.color} w-full h-full rounded-[39px] p-8 flex flex-col justify-between min-h-[220px]`}>
+              <div className={`${link.color} w-full h-full p-8 flex flex-col justify-between min-h-[220px] transition-transform duration-300 group-hover:scale-[1.02]`}>
                 <div className="flex justify-between items-start">
                   <div className="w-14 h-14 rounded-2xl bg-white/40 backdrop-blur-sm flex items-center justify-center text-3xl shadow-inner">
                     {link.icon}
