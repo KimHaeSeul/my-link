@@ -17,7 +17,7 @@ export default function Home() {
         {/* Profile Header */}
         <div className="flex flex-col items-center text-center mb-20">
           <div className="relative mb-8">
-            <div className="w-[140px] h-[140px] bg-white p-2 shadow-2xl rotate-3 transition-transform hover:rotate-0 blob-shape overflow-hidden">
+            <div className="w-[140px] h-[140px] bg-white p-2 shadow-2xl blob-shape overflow-hidden">
               <div className="w-full h-full rounded-[inherit] bg-gradient-to-br from-bubblegum-pink to-lavender-dream flex items-center justify-center text-white text-5xl font-semibold tracking-tight">
                 HS
               </div>
@@ -49,13 +49,13 @@ export default function Home() {
         </div>
 
         <section className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-20">
-          {links.map((link, index) => (
+          {links.map((link) => (
             <a
               key={link.name}
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              className={`cloud-card p-1 group ${index % 2 === 0 ? "rotate-1" : "-rotate-1"}`}
+              className="cloud-card p-1 group"
             >
               <div className={`${link.color} w-full h-full p-8 flex flex-col justify-between min-h-[220px] rounded-[inherit]`}>
                 <div className="flex justify-between items-start">
