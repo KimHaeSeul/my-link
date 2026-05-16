@@ -30,7 +30,7 @@ export default function Home() {
             <div className="w-[140px] h-[140px] relative blob-shape">
               {/* Wavy Background Layer */}
               <div 
-                className="absolute inset-0 bg-white shadow-2xl blob-shape"
+                className="absolute inset-0 bg-white shadow-[0_20px_50px_rgba(0,0,0,0.1)] blob-shape"
                 style={{ filter: "url(#wavy-edge)" }}
               />
               {/* Content Layer (Legible) */}
@@ -57,14 +57,14 @@ export default function Home() {
           <div className="flex gap-4">
             <button className="relative px-8 py-3 group">
               <div 
-                className="absolute inset-0 bg-bubblegum-pink rounded-full"
+                className="absolute inset-0 bg-bubblegum-pink rounded-full shadow-[0_10px_25px_rgba(0,0,0,0.1)] transition-shadow group-hover:shadow-[0_15px_30px_rgba(0,0,0,0.15)]"
                 style={{ filter: "url(#wavy-edge)" }}
               />
               <span className="relative text-white text-lg font-medium">Contact Me</span>
             </button>
             <button className="relative px-8 py-3 group">
               <div 
-                className="absolute inset-0 bg-white border-2 border-slate-100 rounded-full shadow-sm"
+                className="absolute inset-0 bg-white border-2 border-slate-50 rounded-full shadow-[0_10px_25px_rgba(0,0,0,0.05)] transition-shadow group-hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)]"
                 style={{ filter: "url(#wavy-edge)" }}
               />
               <span className="relative text-slate-800 text-lg font-medium">Explore More</span>

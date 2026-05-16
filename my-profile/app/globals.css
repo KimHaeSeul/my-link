@@ -83,11 +83,13 @@ body {
   .cloud-card {
     @apply relative bg-white transition-all duration-300 rounded-[40px];
     box-shadow: 
-      20px 20px 40px rgba(0, 0, 0, 0.05),
-      inset 10px 10px 20px rgba(255, 255, 255, 0.8);
+      0 20px 40px rgba(0, 0, 0, 0.08),
+      inset 0 10px 20px rgba(255, 255, 255, 0.9);
   }
 
   .cloud-card:hover {
     @apply scale-[1.02];
+    box-shadow: 
+      0 30px 60px rgba(0, 0, 0, 0.12);
   }
 }
