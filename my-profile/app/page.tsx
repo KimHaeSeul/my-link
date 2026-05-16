@@ -30,11 +30,11 @@ export default function Home() {
             <div className="w-[140px] h-[140px] relative blob-shape">
               {/* Glassy Wavy Background Layer */}
               <div 
-                className="absolute inset-0 bg-bubblegum-pink/20 backdrop-blur-xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] blob-shape border border-white/50"
+                className="absolute inset-0 bg-[#FFF5F7] shadow-[0_20px_50px_rgba(0,0,0,0.08)] blob-shape border-2 border-white"
                 style={{ filter: "url(#wavy-edge)" }}
               />
               {/* Content Layer (Legible) */}
-              <div className="absolute inset-2 blob-shape bg-gradient-to-br from-bubblegum-pink/80 to-lavender-dream/80 flex items-center justify-center text-white text-5xl font-semibold tracking-tight shadow-inner">
+              <div className="absolute inset-2 blob-shape bg-gradient-to-br from-bubblegum-pink to-lavender-dream flex items-center justify-center text-white text-5xl font-semibold tracking-tight shadow-inner">
                 HS
               </div>
             </div>
@@ -57,14 +57,14 @@ export default function Home() {
           <div className="flex gap-4">
             <button className="relative px-8 py-3 group">
               <div 
-                className="absolute inset-0 bg-bubblegum-pink/70 backdrop-blur-md rounded-full shadow-[0_10px_25px_rgba(0,0,0,0.1)] border border-white/30 transition-all group-hover:bg-bubblegum-pink/80 group-hover:shadow-[0_15px_30px_rgba(0,0,0,0.15)]"
+                className="absolute inset-0 bg-bubblegum-pink rounded-full shadow-[0_10px_25px_rgba(0,0,0,0.1)] border-2 border-white transition-all group-hover:shadow-[0_15px_30px_rgba(0,0,0,0.15)]"
                 style={{ filter: "url(#wavy-edge)" }}
               />
               <span className="relative text-white text-lg font-medium">Contact Me</span>
             </button>
             <button className="relative px-8 py-3 group">
               <div 
-                className="absolute inset-0 bg-white/30 backdrop-blur-md border border-white/50 rounded-full shadow-[0_10px_25px_rgba(0,0,0,0.05)] transition-all group-hover:bg-white/40 group-hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)]"
+                className="absolute inset-0 bg-white border-2 border-slate-50 rounded-full shadow-[0_10px_25px_rgba(0,0,0,0.05)] transition-all group-hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)]"
                 style={{ filter: "url(#wavy-edge)" }}
               />
               <span className="relative text-slate-800 text-lg font-medium">Explore More</span>
@@ -81,9 +81,9 @@ export default function Home() {
               rel="noopener noreferrer"
               className="relative group min-h-[220px]"
             >
-              {/* Tinted Glassy Wavy Background Layer */}
+              {/* Solid Light Pastel Background Layer */}
               <div 
-                className={`absolute inset-0 ${link.color}/40 backdrop-blur-xl shadow-lg rounded-[40px] border border-white/40`}
+                className={`absolute inset-0 ${link.color} brightness-[1.05] saturate-[0.8] shadow-lg rounded-[40px] border-2 border-white`}
                 style={{ filter: "url(#wavy-edge)" }}
               />
               
