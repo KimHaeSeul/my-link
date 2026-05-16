@@ -15,10 +15,9 @@
 }
 
 body {
-  background: 
-    radial-gradient(var(--color-bubblegum-pink) 1.5px, transparent 1.5px),
-    linear-gradient(135deg, #fdf2f8 0%, #e0f2fe 100%);
-  background-size: 24px 24px, 100% 100%;
+  background-color: #ffffff;
+  background-image: radial-gradient(var(--color-bubblegum-pink) 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
   color: var(--foreground);
   font-family: var(--font-geist-sans), sans-serif;
   min-height: 100vh;
