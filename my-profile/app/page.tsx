@@ -26,7 +26,7 @@ export default function Home() {
               Hello, I&apos;m <span className="bg-pastel-pink px-2 border-[3px] border-black shadow-[4px_4px_0px_0px_#000]">HaeSeul</span>
             </h1>
             <p className="text-xl md:text-2xl font-bold mb-6 max-w-2xl leading-relaxed">
-              A creative developer building minimal and impactful web experiences. Welcome to my link space!
+              Welcome to my-link space!
             </p>
             <div className="flex flex-wrap justify-center lg:justify-start gap-4">
               <button className="neo-brutalist-btn bg-white">Say Hello!</button>
