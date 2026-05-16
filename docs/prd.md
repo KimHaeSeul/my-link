@@ -15,12 +15,12 @@
 | 구분 | 기능명 | 상세 내용 |
 | :--- | :--- | :--- |
 | **인증** | 구글 소셜 로그인 | Firebase Auth를 통한 가입 및 로그인 |
-| **프로필** | 프로필 설정 | **displayName**, **username**, **bio** 수정 기능 (username은 URL로 사용됨) |
+| **프로필** | 프로필 설정 | **displayName**, **bio** 수정 기능 (displayName은 URL slug로 사용됨) |
 | **링크 관리** | 링크 추가 및 삭제 | 링크 제목과 URL 입력 |
 | **편집** | **인라인 편집** | 링크 목록에서 제목과 URL을 즉시 수정 가능 |
 | **아이콘** | **자동 파비콘** | Google API를 사용하여 URL 기반 파비콘 노출 |
 | **UI/UX** | shadcn/ui 기반 | 심플하고 모던한 UI 및 반응형 레이아웃 |
-| **공유** | username URL | `domain.com/[username]` 형태의 고유 접근 경로 제공 |
+| **공유** | displayName URL | `domain.com/[displayName]` 형태의 고유 접근 경로 제공 |
 
 ### 3.2 확장 기능 (Phase 2)
 | 구분 | 기능명 | 상세 내용 |
@@ -32,7 +32,7 @@
 ### 4.1 데이터베이스 구조 (Firebase Firestore)
 - **사용자 정보 (Root Collection: `users`)**
   - Document ID: `{uid}`
-  - Fields: `displayName`, `username`, `bio`, `email`, `createdAt`
+  - Fields: `displayName`, `bio`, `email`, `createdAt`
 - **링크 정보 (Sub-collection: `users/{uid}/links`)**
   - Document ID: 자동 생성
   - Fields: `title`, `url`, `clickCount`, `updatedAt`
@@ -45,9 +45,10 @@
 - Google Favicon 서비스 사용: `https://www.google.com/s2/favicons?domain=[URL]&sz=64`
 - URL 입력 완료 시 해당 도메인의 파비콘을 실시간으로 가져와 리스트에 노출.
 
-### 4.4 URL 라우팅 및 username
-- 별도의 핸들 없이 사용자가 설정한 `username`이 즉시 URL 주소가 됨.
-- 중복 username 체크 기능 필요.
+### 4.4 URL 라우팅 및 displayName 설정
+- **URL Slug**: 사용자의 `displayName`이 즉시 URL 주소가 됨 (`domain.com/[displayName]`).
+- **초기값 설정**: 첫 로그인 시 구글 지메일 계정의 앞부분(`email.split('@')[0]`)을 가져와서 `displayName` 초기값으로 설정함.
+- **중복 체크**: 고유한 URL 제공을 위해 `displayName` 중복 체크 기능 필요.
 
 ## 5. 기술 스택
 - **Framework**: Next.js (App Router)
