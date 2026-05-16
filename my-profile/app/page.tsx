@@ -27,11 +27,14 @@ export default function Home() {
         {/* Profile Header */}
         <div className="flex flex-col items-center text-center mb-20">
           <div className="relative mb-8">
-            <div 
-              className="w-[140px] h-[140px] bg-white p-2 shadow-2xl blob-shape overflow-hidden"
-              style={{ filter: "url(#wavy-edge)" }}
-            >
-              <div className="w-full h-full rounded-[inherit] bg-gradient-to-br from-bubblegum-pink to-lavender-dream flex items-center justify-center text-white text-5xl font-semibold tracking-tight">
+            <div className="w-[140px] h-[140px] relative blob-shape">
+              {/* Wavy Background Layer */}
+              <div 
+                className="absolute inset-0 bg-white shadow-2xl blob-shape"
+                style={{ filter: "url(#wavy-edge)" }}
+              />
+              {/* Content Layer (Legible) */}
+              <div className="absolute inset-2 blob-shape bg-gradient-to-br from-bubblegum-pink to-lavender-dream flex items-center justify-center text-white text-5xl font-semibold tracking-tight">
                 HS
               </div>
             </div>
@@ -52,17 +55,19 @@ export default function Home() {
           </p>
 
           <div className="flex gap-4">
-            <button 
-              className="clay-btn bg-bubblegum-pink text-white text-lg"
-              style={{ filter: "url(#wavy-edge)" }}
-            >
-              Contact Me
+            <button className="relative px-8 py-3 group">
+              <div 
+                className="absolute inset-0 bg-bubblegum-pink rounded-full"
+                style={{ filter: "url(#wavy-edge)" }}
+              />
+              <span className="relative text-white text-lg font-medium">Contact Me</span>
             </button>
-            <button 
-              className="clay-btn bg-white text-slate-800 text-lg"
-              style={{ filter: "url(#wavy-edge)" }}
-            >
-              Explore More
+            <button className="relative px-8 py-3 group">
+              <div 
+                className="absolute inset-0 bg-white border-2 border-slate-100 rounded-full shadow-sm"
+                style={{ filter: "url(#wavy-edge)" }}
+              />
+              <span className="relative text-slate-800 text-lg font-medium">Explore More</span>
             </button>
           </div>
         </div>
@@ -74,10 +79,16 @@ export default function Home() {
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="cloud-card p-1 group overflow-visible"
-              style={{ filter: "url(#wavy-edge)" }}
+              className="relative group min-h-[220px]"
             >
-              <div className={`${link.color} w-full h-full p-8 flex flex-col justify-between min-h-[220px] rounded-[inherit]`}>
+              {/* Wavy Background Layer */}
+              <div 
+                className={`absolute inset-0 ${link.color} shadow-lg rounded-[40px]`}
+                style={{ filter: "url(#wavy-edge)" }}
+              />
+              
+              {/* Content Layer (Legible) */}
+              <div className="relative w-full h-full p-8 flex flex-col justify-between z-10">
                 <div className="flex justify-between items-start">
                   <div className="w-14 h-14 rounded-3xl bg-white/40 backdrop-blur-sm flex items-center justify-center text-3xl shadow-inner">
                     {link.icon}
