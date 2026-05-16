@@ -15,11 +15,11 @@
 | 구분 | 기능명 | 상세 내용 |
 | :--- | :--- | :--- |
 | **인증** | 구글 소셜 로그인 | Firebase Auth를 통한 가입 및 로그인 |
-| **프로필** | 프로필 설정 | **displayName**, **bio** 수정 기능 (displayName은 URL slug로 사용됨) |
+| **프로필** | 프로필 설정 | **Google 프로필 이미지**(자동), **displayName**, **bio** 수정 기능 |
 | **링크 관리** | 링크 추가 및 삭제 | 링크 제목과 URL 입력 |
 | **편집** | **인라인 편집** | 링크 목록에서 제목과 URL을 즉시 수정 가능 |
 | **아이콘** | **자동 파비콘** | Google API를 사용하여 URL 기반 파비콘 노출 |
-| **UI/UX** | shadcn/ui 기반 | 심플하고 모던한 UI 및 반응형 레이아웃 |
+| **UI/UX** | **shadcn/ui 기반** | **스켈레톤 UI**, **고정 푸터(CTA)** 포함 심플 모던 디자인 |
 | **공유** | displayName URL | `mylink.com/displayName` 형태의 고유 접근 경로 제공 |
 
 ### 3.2 확장 기능 (Phase 2)
@@ -32,7 +32,7 @@
 ### 4.1 데이터베이스 구조 (Firebase Firestore)
 - **사용자 정보 (Root Collection: `users`)**
   - Document ID: `{uid}`
-  - Fields: `displayName`, `bio`, `email`, `createdAt`
+  - Fields: `displayName`, `bio`, `email`, `photoURL` (Google Profile), `createdAt`
 - **링크 정보 (Sub-collection: `users/{uid}/links`)**
   - Document ID: 자동 생성
   - Fields: `title`, `url`, `clickCount`, `updatedAt`
