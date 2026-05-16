@@ -2,85 +2,119 @@ import React from "react";
 
 export default function Home() {
   const links = [
-    { name: "GitHub", url: "https://github.com/KimHaeSeul", color: "bg-pastel-blue", description: "Check out my code and projects" },
-    { name: "Instagram", url: "#", color: "bg-pastel-pink", description: "Daily life and photography" },
-    { name: "LinkedIn", url: "#", color: "bg-pastel-yellow", description: "Professional networking" },
-    { name: "Blog", url: "#", color: "bg-pastel-mint", description: "Thoughts and tech tutorials" },
+    { name: "GitHub", url: "https://github.com/KimHaeSeul", color: "bg-electric-blue", icon: "🚀", description: "My code galaxy" },
+    { name: "Instagram", url: "#", color: "bg-bubblegum-pink", icon: "📸", description: "Life is a movie" },
+    { name: "Blog", url: "#", color: "bg-lavender-dream", icon: "📝", description: "My thoughts & life" },
+    { name: "Portfolio", url: "#", color: "bg-soft-mint", icon: "🎨", description: "Creative box" },
   ];
 
   return (
-    <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
-      {/* Hero Section */}
-      <main className="max-w-5xl mx-auto">
-        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12 mb-16 mt-8">
-          {/* Profile Image Column */}
-          <div className="flex-shrink-0">
-            <div className="profile-image-circle">
-              HS
+    <div className="relative min-h-screen py-16 px-6 overflow-hidden">
+      {/* Background Stickers */}
+      <div className="sticker top-10 left-[10%] text-6xl">⭐</div>
+      <div className="sticker top-40 right-[15%] text-5xl">💖</div>
+      <div className="sticker bottom-20 left-[5%] text-7xl opacity-50">🌈</div>
+      <div className="sticker bottom-40 right-[10%] text-6xl rotate-12">✨</div>
+      <div className="sticker top-[60%] left-[20%] text-4xl opacity-30">☁️</div>
+
+      <main className="max-w-4xl mx-auto relative z-10">
+        {/* Profile Header */}
+        <div className="flex flex-col items-center text-center mb-20">
+          <div className="relative mb-8">
+            <div className="w-[140px] h-[140px] rounded-[50px] bg-white p-2 shadow-2xl rotate-3 transition-transform hover:rotate-0">
+              <div className="w-full h-full rounded-[40px] bg-gradient-to-br from-bubblegum-pink to-lavender-dream flex items-center justify-center text-white text-5xl font-black tracking-tighter">
+                HS
+              </div>
+            </div>
+            <div className="absolute -bottom-2 -right-4 bg-lemon-pop border-4 border-white rounded-2xl px-4 py-1 font-black text-xl shadow-lg rotate-12">
+              Hello!
             </div>
           </div>
 
-          {/* Intro Column */}
-          <div className="flex-grow text-center lg:text-left">
-            <h1 className="text-4xl md:text-6xl font-black mb-4 uppercase tracking-tighter">
-              Hello, I&apos;m <span className="bg-pastel-pink px-2 border-[3px] border-black shadow-[4px_4px_0px_0px_#000]">HaeSeul</span>
-            </h1>
-            <p className="text-xl md:text-2xl font-bold mb-6 max-w-2xl leading-relaxed">
-              Welcome to my-link space!
-            </p>
-            <div className="flex flex-wrap justify-center lg:justify-start gap-4">
-              <button className="neo-brutalist-btn bg-white">Say Hello!</button>
-              <button className="neo-brutalist-btn bg-pastel-mint">My Resume</button>
-            </div>
+          <h1 className="text-5xl md:text-7xl font-black mb-4 tracking-tight text-slate-800">
+            Hae<span className="text-bubblegum-pink">Seul</span>&apos;s World
+          </h1>
+          
+          <div className="flex items-center gap-3 mb-8">
+            <div className="glass-pill">✨ Creative</div>
+            <div className="glass-pill">🎀 Kitsch</div>
+            <div className="glass-pill">🚀 Tech</div>
+          </div>
+
+          <p className="text-xl md:text-2xl font-bold text-slate-600 max-w-xl leading-relaxed mb-10">
+            Welcome to my-link space! <br />
+            Let&apos;s make something cool together 🍭
+          </p>
+
+          <div className="flex gap-4">
+            <button className="clay-btn bg-bubblegum-pink text-white text-lg">
+              Contact Me
+            </button>
+            <button className="clay-btn bg-white text-slate-800 text-lg">
+              Explore More
+            </button>
           </div>
         </div>
 
         {/* Links Grid */}
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
           {links.map((link) => (
             <a
               key={link.name}
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              className={`neo-brutalist-card ${link.color} p-8 flex flex-col justify-between group h-full`}
+              className="clay-card p-1 group overflow-hidden"
             >
-              <div>
-                <h3 className="text-3xl font-black mb-2 uppercase italic">{link.name}</h3>
-                <p className="text-lg font-bold opacity-80 mb-6">{link.description}</p>
-              </div>
-              <div className="flex items-center gap-2 self-end">
-                <span className="font-black text-sm uppercase">Visit Link</span>
-                <div className="w-8 h-8 rounded-full border-2 border-black flex items-center justify-center group-hover:translate-x-1 transition-transform">
-                  →
+              <div className={`${link.color} w-full h-full rounded-[39px] p-8 flex flex-col justify-between min-h-[220px]`}>
+                <div className="flex justify-between items-start">
+                  <div className="w-14 h-14 rounded-2xl bg-white/40 backdrop-blur-sm flex items-center justify-center text-3xl shadow-inner">
+                    {link.icon}
+                  </div>
+                  <div className="bg-slate-800/10 rounded-full px-3 py-1 text-xs font-black uppercase tracking-widest text-slate-800">
+                    Active
+                  </div>
+                </div>
+                
+                <div>
+                  <h3 className="text-3xl font-black text-slate-800 mb-1 uppercase">
+                    {link.name}
+                  </h3>
+                  <p className="text-slate-800/70 font-bold text-sm">
+                    {link.description}
+                  </p>
+                </div>
+
+                <div className="absolute right-6 bottom-6 translate-y-12 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                   <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-slate-800 text-xl shadow-lg">
+                     →
+                   </div>
                 </div>
               </div>
             </a>
           ))}
         </section>
 
-        {/* Stats / Info Section for "Landing Page" feel */}
-        <section className="neo-brutalist-card bg-pastel-blue p-8 md:p-12 mb-16">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div>
-              <div className="text-5xl font-black mb-2 tracking-tighter">12+</div>
-              <div className="text-lg font-bold uppercase">Projects Done</div>
-            </div>
-            <div>
-              <div className="text-5xl font-black mb-2 tracking-tighter">500+</div>
-              <div className="text-lg font-bold uppercase">Coffee Cups</div>
-            </div>
-            <div>
-              <div className="text-5xl font-black mb-2 tracking-tighter">∞</div>
-              <div className="text-lg font-bold uppercase">Possibilities</div>
-            </div>
+        {/* Special Sticker Banner */}
+        <section className="relative py-12 mb-20">
+          <div className="clay-card bg-lemon-pop p-8 text-center relative overflow-hidden">
+            <div className="absolute top-0 right-0 p-4 text-4xl opacity-20">🎨</div>
+            <h2 className="text-3xl font-black text-slate-800 mb-2 uppercase tracking-tighter">
+              Stay Sweet & Stay Creative!
+            </h2>
+            <p className="font-bold text-slate-700">
+              Dreaming of a colorful digital future ✨
+            </p>
           </div>
         </section>
 
         {/* Footer */}
-        <footer className="text-center pb-8">
-          <p className="font-black text-sm uppercase tracking-widest">
-            © 2026 My Link • Designed with <span className="text-pastel-pink">♥</span> by HS
+        <footer className="text-center pb-12 flex flex-col items-center gap-4">
+          <div className="flex gap-4 text-2xl">
+            <span>🍭</span><span>🎀</span><span>🍦</span><span>🧸</span>
+          </div>
+          <p className="font-black text-xs uppercase tracking-[0.2em] text-slate-400">
+            © 2026 HaeSeul • Made with Love & Magic
           </p>
         </footer>
       </main>
